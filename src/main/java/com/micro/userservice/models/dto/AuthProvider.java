@@ -21,8 +21,8 @@ public enum AuthProvider {
         try{
             return AuthProvider.valueOf(ProviderName.toUpperCase());
         }catch (IllegalArgumentException e) {
-            throw new OAuth2AuthenticationException(new OAuth2Error
-                    ("invalid_provider", ProviderName, "Invalid provider"));
+           throw new OAuth2AuthenticationException(new OAuth2Error("invalid_provider", ProviderName, "Invalid provider"));
         }
     }
+
 }

@@ -1,5 +1,4 @@
 package com.micro.userservice.models;
-
 import com.micro.userservice.models.dto.TokenType;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -28,6 +27,7 @@ public class UserToken {
      * Entitet za upravljanje tokenima
      * Podržava i JWT i OAuth2 tokene
      */
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -74,3 +74,5 @@ public class UserToken {
     }
 
 }
+
+

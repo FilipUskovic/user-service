@@ -12,3 +12,4 @@ ovaj servis ce biti odgvoran za security korsinika applikacija putem jwt i oauth
 
 - imati cu svaki manji compose yml file za svaki servis i jedan veliki koji ce spajati ta dva 
 
+ dodao local repository kao mavenlocal za za standalone library za kesiranje koje cu korsiti u ovom servisu 
