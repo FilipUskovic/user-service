@@ -1,1 +1,2 @@
 rootProject.name = 'user-service'
+//include 'caching-lib' // dodajem ovo za koristenje libs-a
