@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class User implements UserDetails, OAuth2User {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

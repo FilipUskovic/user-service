@@ -1,7 +1,44 @@
 spring:
   application:
     name: user-service
+  cache:
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=30m
+    redis:
+      time-to-live: 1h
+      key-prefix: user-service
 
 
 server:
   port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus,cache,flyway, prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    enable:
+    #  kafka: true
+      cache: true
+      jvm: true
+      process: true
+      system: true
+     # hikaricp: true
+  health:
+  #  db:
+   #   enabled: true
+    redis:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+        # kubernetes ne korsitim jos
+        #probes:
+      #enabled: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
